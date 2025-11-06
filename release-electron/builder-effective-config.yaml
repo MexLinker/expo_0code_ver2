@@ -1,0 +1,20 @@
+directories:
+  output: ../release-electron
+  buildResources: build
+appId: com.obytes.myapp
+productName: MyApp
+files:
+  - filter:
+      - ../dist/**/*
+      - '**/*'
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: true
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: false
+electronVersion: 32.3.3
